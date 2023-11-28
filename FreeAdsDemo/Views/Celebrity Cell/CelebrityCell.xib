@@ -22,19 +22,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="167" height="191"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f6R-s7-DUZ" customClass="RoundedButton" customModule="FreeAdsDemo" customModuleProvider="target">
-                                <rect key="frame" x="12" y="12" width="35" height="35"/>
+                                <rect key="frame" x="12" y="12" width="30" height="30"/>
                                 <color key="backgroundColor" red="0.91764705882352937" green="0.91764705882352937" blue="0.91764705882352937" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="SSh-bm-0wG"/>
+                                    <constraint firstAttribute="height" constant="30" id="SSh-bm-0wG"/>
                                     <constraint firstAttribute="width" secondItem="f6R-s7-DUZ" secondAttribute="height" multiplier="1:1" id="dC4-Nq-GE9"/>
                                 </constraints>
                                 <color key="tintColor" name="appYellow"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
-                                    <imageReference key="image" image="star.fill" catalog="system" symbolScale="medium"/>
+                                    <imageReference key="image" image="star.fill" catalog="system" symbolScale="small"/>
                                 </buttonConfiguration>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="tas-D4-l4V">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="tas-D4-l4V">
                                 <rect key="frame" x="34.333333333333336" y="30" width="98.333333333333314" height="141"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Xfh-7n-Xka">
@@ -50,13 +50,13 @@
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Amr Salama" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xtO-Uv-rom">
-                                        <rect key="frame" x="0.0" y="72" width="98.333333333333329" height="20.333333333333329"/>
+                                        <rect key="frame" x="0.0" y="70" width="98.333333333333329" height="20.333333333333329"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Film Director" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jdg-ha-DH7">
-                                        <rect key="frame" x="13" y="94.333333333333329" width="72.666666666666671" height="14.666666666666671"/>
+                                        <rect key="frame" x="13" y="90.333333333333329" width="72.666666666666671" height="20.666666666666671"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <color key="textColor" name="appYellow"/>
                                         <nil key="highlightedColor"/>
@@ -87,7 +87,7 @@
                         <color key="backgroundColor" red="0.11069066079999999" green="0.1163043305" blue="0.17647778989999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="f6R-s7-DUZ" firstAttribute="leading" secondItem="NB8-E6-uGu" secondAttribute="leading" constant="12" id="Vw5-PU-Aro"/>
-                            <constraint firstAttribute="bottom" secondItem="tas-D4-l4V" secondAttribute="bottom" constant="20" id="bJl-e1-h3a"/>
+                            <constraint firstAttribute="bottom" secondItem="tas-D4-l4V" secondAttribute="bottom" priority="999" constant="20" id="bJl-e1-h3a"/>
                             <constraint firstItem="f6R-s7-DUZ" firstAttribute="top" secondItem="NB8-E6-uGu" secondAttribute="top" constant="12" id="oKP-CT-dsn"/>
                             <constraint firstItem="ELS-Cp-btW" firstAttribute="width" secondItem="NB8-E6-uGu" secondAttribute="width" multiplier="0.5" id="oVs-wI-xnl"/>
                             <constraint firstItem="tas-D4-l4V" firstAttribute="centerX" secondItem="NB8-E6-uGu" secondAttribute="centerX" id="xZj-lA-bpY"/>

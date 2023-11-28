@@ -13,6 +13,9 @@
 		1032CC542B16948500F2B676 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1032CC532B16948500F2B676 /* UICollectionView+Extension.swift */; };
 		1032CC572B1694BC00F2B676 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1032CC562B1694BC00F2B676 /* NibLoadable.swift */; };
 		1032CC592B1694DB00F2B676 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1032CC582B1694DB00F2B676 /* Reusable.swift */; };
+		1032CC5C2B16966600F2B676 /* Celebrity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1032CC5B2B16966600F2B676 /* Celebrity.swift */; };
+		1032CC602B169DC100F2B676 /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1032CC5E2B169DC100F2B676 /* SectionHeaderView.swift */; };
+		1032CC612B169DC100F2B676 /* SectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1032CC5F2B169DC100F2B676 /* SectionHeaderView.xib */; };
 		103DD38E2B15B2F500624EDF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103DD38D2B15B2F500624EDF /* AppDelegate.swift */; };
 		103DD3952B15B2F500624EDF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 103DD3932B15B2F500624EDF /* Main.storyboard */; };
 		103DD3972B15B2F700624EDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 103DD3962B15B2F700624EDF /* Assets.xcassets */; };
@@ -28,6 +31,9 @@
 		1032CC532B16948500F2B676 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
 		1032CC562B1694BC00F2B676 /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 		1032CC582B1694DB00F2B676 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		1032CC5B2B16966600F2B676 /* Celebrity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Celebrity.swift; sourceTree = "<group>"; };
+		1032CC5E2B169DC100F2B676 /* SectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderView.swift; sourceTree = "<group>"; };
+		1032CC5F2B169DC100F2B676 /* SectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionHeaderView.xib; sourceTree = "<group>"; };
 		103DD38A2B15B2F500624EDF /* FreeAdsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FreeAdsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		103DD38D2B15B2F500624EDF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		103DD3942B15B2F500624EDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -75,6 +81,23 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		1032CC5A2B16965600F2B676 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1032CC5B2B16966600F2B676 /* Celebrity.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1032CC5D2B169D8900F2B676 /* Section Header View */ = {
+			isa = PBXGroup;
+			children = (
+				1032CC5E2B169DC100F2B676 /* SectionHeaderView.swift */,
+				1032CC5F2B169DC100F2B676 /* SectionHeaderView.xib */,
+			);
+			path = "Section Header View";
+			sourceTree = "<group>";
+		};
 		103DD3812B15B2F400624EDF = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				103DD38D2B15B2F500624EDF /* AppDelegate.swift */,
+				1032CC5A2B16965600F2B676 /* Model */,
 				1032CC552B1694A400F2B676 /* Protocols */,
 				1032CC522B16947700F2B676 /* Extensions */,
 				103DD3A92B15CE8D00624EDF /* Views */,
@@ -137,6 +161,7 @@
 				103DD3AA2B15CE9B00624EDF /* RoundedButton.swift */,
 				1032CC4B2B15E65E00F2B676 /* BorderedView.swift */,
 				1032CC4D2B15F77900F2B676 /* Celebrity Cell */,
+				1032CC5D2B169D8900F2B676 /* Section Header View */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -201,6 +226,7 @@
 			files = (
 				103DD39A2B15B2F700624EDF /* LaunchScreen.storyboard in Resources */,
 				1032CC512B15F82600F2B676 /* CelebrityCell.xib in Resources */,
+				1032CC612B169DC100F2B676 /* SectionHeaderView.xib in Resources */,
 				103DD3972B15B2F700624EDF /* Assets.xcassets in Resources */,
 				103DD3952B15B2F500624EDF /* Main.storyboard in Resources */,
 			);
@@ -217,8 +243,10 @@
 				103DD3A52B15B62A00624EDF /* CategoryListVC.swift in Sources */,
 				1032CC572B1694BC00F2B676 /* NibLoadable.swift in Sources */,
 				103DD3AB2B15CE9B00624EDF /* RoundedButton.swift in Sources */,
+				1032CC5C2B16966600F2B676 /* Celebrity.swift in Sources */,
 				1032CC592B1694DB00F2B676 /* Reusable.swift in Sources */,
 				1032CC502B15F82600F2B676 /* CelebrityCell.swift in Sources */,
+				1032CC602B169DC100F2B676 /* SectionHeaderView.swift in Sources */,
 				1032CC4C2B15E65E00F2B676 /* BorderedView.swift in Sources */,
 				103DD38E2B15B2F500624EDF /* AppDelegate.swift in Sources */,
 			);

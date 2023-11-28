@@ -177,6 +177,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="5T6-tS-Iuo"/>
                     <connections>
+                        <outlet property="collectionView" destination="JqM-2W-Jlj" id="fLc-JO-Gp1"/>
                         <outlet property="searchBar" destination="A1u-bB-m79" id="ld9-87-lHX"/>
                     </connections>
                 </viewController>
