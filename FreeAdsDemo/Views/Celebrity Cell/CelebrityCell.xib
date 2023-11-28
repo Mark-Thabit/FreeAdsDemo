@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CelebrityCell" customModule="FreeAdsDemo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="167" height="191"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="167" height="191"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NB8-E6-uGu">
+                        <rect key="frame" x="0.0" y="0.0" width="167" height="191"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f6R-s7-DUZ" customClass="RoundedButton" customModule="FreeAdsDemo" customModuleProvider="target">
+                                <rect key="frame" x="12" y="12" width="35" height="35"/>
+                                <color key="backgroundColor" red="0.91764705882352937" green="0.91764705882352937" blue="0.91764705882352937" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="SSh-bm-0wG"/>
+                                    <constraint firstAttribute="width" secondItem="f6R-s7-DUZ" secondAttribute="height" multiplier="1:1" id="dC4-Nq-GE9"/>
+                                </constraints>
+                                <color key="tintColor" name="appYellow"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <imageReference key="image" image="star.fill" catalog="system" symbolScale="medium"/>
+                                </buttonConfiguration>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="tas-D4-l4V">
+                                <rect key="frame" x="34.333333333333336" y="30" width="98.333333333333314" height="141"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Xfh-7n-Xka">
+                                        <rect key="frame" x="14.333333333333329" y="0.0" width="70" height="70"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Xfh-7n-Xka" secondAttribute="height" id="Bdc-nR-gZQ"/>
+                                            <constraint firstAttribute="height" constant="70" id="gBn-Vo-jPk"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="35"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Amr Salama" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xtO-Uv-rom">
+                                        <rect key="frame" x="0.0" y="72" width="98.333333333333329" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Film Director" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jdg-ha-DH7">
+                                        <rect key="frame" x="13" y="94.333333333333329" width="72.666666666666671" height="14.666666666666671"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" name="appYellow"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ELS-Cp-btW">
+                                        <rect key="frame" x="7.3333333333333286" y="111" width="83.666666666666671" height="30"/>
+                                        <color key="backgroundColor" name="appYellow"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="Uq0-yb-4Ss"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="10"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Follow">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="followButtonTapped:" destination="gTV-IL-0wX" eventType="touchUpInside" id="t1L-5n-Fk2"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.11069066079999999" green="0.1163043305" blue="0.17647778989999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="f6R-s7-DUZ" firstAttribute="leading" secondItem="NB8-E6-uGu" secondAttribute="leading" constant="12" id="Vw5-PU-Aro"/>
+                            <constraint firstAttribute="bottom" secondItem="tas-D4-l4V" secondAttribute="bottom" constant="20" id="bJl-e1-h3a"/>
+                            <constraint firstItem="f6R-s7-DUZ" firstAttribute="top" secondItem="NB8-E6-uGu" secondAttribute="top" constant="12" id="oKP-CT-dsn"/>
+                            <constraint firstItem="ELS-Cp-btW" firstAttribute="width" secondItem="NB8-E6-uGu" secondAttribute="width" multiplier="0.5" id="oVs-wI-xnl"/>
+                            <constraint firstItem="tas-D4-l4V" firstAttribute="centerX" secondItem="NB8-E6-uGu" secondAttribute="centerX" id="xZj-lA-bpY"/>
+                            <constraint firstItem="tas-D4-l4V" firstAttribute="top" secondItem="NB8-E6-uGu" secondAttribute="top" constant="30" id="xoL-P6-v27"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" name="appYellow"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="17"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="NB8-E6-uGu" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="9UB-wx-tSj"/>
+                <constraint firstAttribute="trailing" secondItem="NB8-E6-uGu" secondAttribute="trailing" id="9pT-4l-mmr"/>
+                <constraint firstItem="NB8-E6-uGu" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Q1G-UR-ES4"/>
+                <constraint firstAttribute="bottom" secondItem="NB8-E6-uGu" secondAttribute="bottom" id="b5h-Wb-YfA"/>
+            </constraints>
+            <size key="customSize" width="167" height="191"/>
+            <connections>
+                <outlet property="followButton" destination="ELS-Cp-btW" id="EhW-YS-cmg"/>
+                <outlet property="jobTypeLbl" destination="jdg-ha-DH7" id="Iip-Ps-vSk"/>
+                <outlet property="nameLbl" destination="xtO-Uv-rom" id="V1c-CX-Qh2"/>
+                <outlet property="profileImageView" destination="Xfh-7n-Xka" id="qMe-YG-EQG"/>
+                <outlet property="stackView" destination="tas-D4-l4V" id="mml-Dd-ue6"/>
+            </connections>
+            <point key="canvasLocation" x="168.70229007633588" y="60.91549295774648"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
+        <namedColor name="appYellow">
+            <color red="1" green="0.72200000286102295" blue="0.0040000001899898052" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

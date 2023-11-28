@@ -7,14 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1032CC4C2B15E65E00F2B676 /* BorderedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1032CC4B2B15E65E00F2B676 /* BorderedView.swift */; };
+		1032CC502B15F82600F2B676 /* CelebrityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1032CC4E2B15F82600F2B676 /* CelebrityCell.swift */; };
+		1032CC512B15F82600F2B676 /* CelebrityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1032CC4F2B15F82600F2B676 /* CelebrityCell.xib */; };
+		1032CC542B16948500F2B676 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1032CC532B16948500F2B676 /* UICollectionView+Extension.swift */; };
+		1032CC572B1694BC00F2B676 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1032CC562B1694BC00F2B676 /* NibLoadable.swift */; };
+		1032CC592B1694DB00F2B676 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1032CC582B1694DB00F2B676 /* Reusable.swift */; };
 		103DD38E2B15B2F500624EDF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103DD38D2B15B2F500624EDF /* AppDelegate.swift */; };
 		103DD3952B15B2F500624EDF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 103DD3932B15B2F500624EDF /* Main.storyboard */; };
 		103DD3972B15B2F700624EDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 103DD3962B15B2F700624EDF /* Assets.xcassets */; };
 		103DD39A2B15B2F700624EDF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 103DD3982B15B2F700624EDF /* LaunchScreen.storyboard */; };
 		103DD3A52B15B62A00624EDF /* CategoryListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103DD3A42B15B62A00624EDF /* CategoryListVC.swift */; };
+		103DD3AB2B15CE9B00624EDF /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103DD3AA2B15CE9B00624EDF /* RoundedButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1032CC4B2B15E65E00F2B676 /* BorderedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderedView.swift; sourceTree = "<group>"; };
+		1032CC4E2B15F82600F2B676 /* CelebrityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelebrityCell.swift; sourceTree = "<group>"; };
+		1032CC4F2B15F82600F2B676 /* CelebrityCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CelebrityCell.xib; sourceTree = "<group>"; };
+		1032CC532B16948500F2B676 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
+		1032CC562B1694BC00F2B676 /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
+		1032CC582B1694DB00F2B676 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		103DD38A2B15B2F500624EDF /* FreeAdsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FreeAdsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		103DD38D2B15B2F500624EDF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		103DD3942B15B2F500624EDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -22,6 +35,7 @@
 		103DD3992B15B2F700624EDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		103DD39B2B15B2F700624EDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		103DD3A42B15B62A00624EDF /* CategoryListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListVC.swift; sourceTree = "<group>"; };
+		103DD3AA2B15CE9B00624EDF /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +49,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1032CC4D2B15F77900F2B676 /* Celebrity Cell */ = {
+			isa = PBXGroup;
+			children = (
+				1032CC4E2B15F82600F2B676 /* CelebrityCell.swift */,
+				1032CC4F2B15F82600F2B676 /* CelebrityCell.xib */,
+			);
+			path = "Celebrity Cell";
+			sourceTree = "<group>";
+		};
+		1032CC522B16947700F2B676 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1032CC532B16948500F2B676 /* UICollectionView+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1032CC552B1694A400F2B676 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				1032CC562B1694BC00F2B676 /* NibLoadable.swift */,
+				1032CC582B1694DB00F2B676 /* Reusable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		103DD3812B15B2F400624EDF = {
 			isa = PBXGroup;
 			children = (
@@ -55,6 +95,9 @@
 			isa = PBXGroup;
 			children = (
 				103DD38D2B15B2F500624EDF /* AppDelegate.swift */,
+				1032CC552B1694A400F2B676 /* Protocols */,
+				1032CC522B16947700F2B676 /* Extensions */,
+				103DD3A92B15CE8D00624EDF /* Views */,
 				103DD3A32B15B5EE00624EDF /* ViewControllers */,
 				103DD3A12B15B52400624EDF /* Storyboards */,
 				103DD3A22B15B55000624EDF /* Support Files */,
@@ -86,6 +129,16 @@
 				103DD3A42B15B62A00624EDF /* CategoryListVC.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		103DD3A92B15CE8D00624EDF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				103DD3AA2B15CE9B00624EDF /* RoundedButton.swift */,
+				1032CC4B2B15E65E00F2B676 /* BorderedView.swift */,
+				1032CC4D2B15F77900F2B676 /* Celebrity Cell */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,6 +200,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				103DD39A2B15B2F700624EDF /* LaunchScreen.storyboard in Resources */,
+				1032CC512B15F82600F2B676 /* CelebrityCell.xib in Resources */,
 				103DD3972B15B2F700624EDF /* Assets.xcassets in Resources */,
 				103DD3952B15B2F500624EDF /* Main.storyboard in Resources */,
 			);
@@ -159,7 +213,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1032CC542B16948500F2B676 /* UICollectionView+Extension.swift in Sources */,
 				103DD3A52B15B62A00624EDF /* CategoryListVC.swift in Sources */,
+				1032CC572B1694BC00F2B676 /* NibLoadable.swift in Sources */,
+				103DD3AB2B15CE9B00624EDF /* RoundedButton.swift in Sources */,
+				1032CC592B1694DB00F2B676 /* Reusable.swift in Sources */,
+				1032CC502B15F82600F2B676 /* CelebrityCell.swift in Sources */,
+				1032CC4C2B15E65E00F2B676 /* BorderedView.swift in Sources */,
 				103DD38E2B15B2F500624EDF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
