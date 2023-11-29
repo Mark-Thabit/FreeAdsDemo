@@ -27,6 +27,7 @@ class CategoryListVC: UIViewController {
     private var dataSource: DataSource? = nil
     private let celebrityList = Celebrity.devList
     private let categoryList = Category.devList
+    private let photoList = (0...5).map { "img-\($0)" }
     
     // MARK: - View life cycle
     
@@ -53,6 +54,7 @@ class CategoryListVC: UIViewController {
     private func configureCollectionView() {
         collectionView.register(cellType: CelebrityCell.self)
         collectionView.register(cellType: CategoryCell.self)
+        collectionView.register(cellType: PhotoCell.self)
         collectionView.register(supplementaryViewType: SectionHeaderView.self,
                                 ofKind: UICollectionView.elementKindSectionHeader)
         
@@ -74,8 +76,12 @@ class CategoryListVC: UIViewController {
                     cell.titleLbl.text = category.title
                     return cell
                     
-                default:
-                    return nil
+                case .photos:
+                    guard let photoName = itemIdentifier as? String else { return nil }
+                    
+                    let cell = collectionView.dequeueReusableCell(for: indexPath, cellType: PhotoCell.self)
+                    cell.photoView.image = UIImage(named: photoName)
+                    return cell
             }
         })
         
@@ -114,6 +120,10 @@ class CategoryListVC: UIViewController {
         snapshot.appendSections([Section.category])
         snapshot.appendItems(categoryList)
         
+        // Photos Section
+        snapshot.appendSections([Section.photos])
+        snapshot.appendItems(photoList)
+        
         return snapshot
     }
     
@@ -127,7 +137,7 @@ class CategoryListVC: UIViewController {
             return switch section {
                 case .celebrity: self.generateCelebritySectionLayout()
                 case .category: self.generateCategorySectionLayout()
-                default: nil
+                case .photos: self.generatePhotosSectionLayout()
             }
         }, configuration: config)
     }
@@ -165,6 +175,19 @@ class CategoryListVC: UIViewController {
         let section = NSCollectionLayoutSection(group: group)
         section.boundarySupplementaryItems = [header]
         section.orthogonalScrollingBehavior = .continuous
+        return section
+    }
+    
+    private func generatePhotosSectionLayout() -> NSCollectionLayoutSection {
+        let item = NSCollectionLayoutItem(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1/2),
+                                                                             heightDimension: .fractionalWidth(1)))
+        item.contentInsets = NSDirectionalEdgeInsets(top: 5, leading: 5, bottom: 5, trailing: 5)
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1),
+                                                                                          heightDimension: .fractionalWidth(1)),
+                                                       repeatingSubitem: item,
+                                                       count: 2)
+        let section = NSCollectionLayoutSection(group: group)
+        section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 120, trailing: 0)
         return section
     }
 }

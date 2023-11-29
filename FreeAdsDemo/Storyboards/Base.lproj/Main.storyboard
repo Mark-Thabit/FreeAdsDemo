@@ -90,7 +90,7 @@
                                         </constraints>
                                     </view>
                                     <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="A1u-bB-m79">
-                                        <rect key="frame" x="45" y="0.0" width="227" height="40"/>
+                                        <rect key="frame" x="44.666666666666657" y="0.0" width="226.99999999999997" height="40"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
                                             <outlet property="delegate" destination="v1P-Hc-Ke6" id="mML-Lh-5Fj"/>
@@ -149,6 +149,8 @@
                             </stackView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" keyboardDismissMode="interactive" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="JqM-2W-Jlj">
                                 <rect key="frame" x="0.0" y="170" width="414" height="566"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="7fO-g1-4Ds">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -157,17 +159,37 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FaZ-or-20O">
+                                <rect key="frame" x="15" y="666" width="384" height="50"/>
+                                <color key="backgroundColor" name="appYellow"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="atf-mQ-hmU"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Add Free Ad">
+                                    <fontDescription key="titleFontDescription" type="system" weight="heavy" pointSize="19"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fOv-DG-rEQ"/>
                         <color key="backgroundColor" name="background"/>
                         <constraints>
                             <constraint firstItem="2l9-pD-egc" firstAttribute="leading" secondItem="N31-rE-bmq" secondAttribute="trailing" constant="15" id="2NK-Em-Lg7"/>
+                            <constraint firstItem="FaZ-or-20O" firstAttribute="leading" secondItem="fOv-DG-rEQ" secondAttribute="leading" constant="15" id="6N7-9v-SAk"/>
                             <constraint firstItem="JqM-2W-Jlj" firstAttribute="top" secondItem="N31-rE-bmq" secondAttribute="bottom" constant="20" id="7Bb-Mn-sS7"/>
+                            <constraint firstItem="fOv-DG-rEQ" firstAttribute="trailing" secondItem="FaZ-or-20O" secondAttribute="trailing" constant="15" id="Ld5-Ow-Vya"/>
                             <constraint firstItem="N31-rE-bmq" firstAttribute="leading" secondItem="fOv-DG-rEQ" secondAttribute="leading" constant="12" id="LfI-rY-4o9"/>
                             <constraint firstItem="ykd-0y-MYN" firstAttribute="top" secondItem="fOv-DG-rEQ" secondAttribute="top" constant="10" id="LwA-Bo-cXa"/>
                             <constraint firstItem="JqM-2W-Jlj" firstAttribute="bottom" secondItem="fOv-DG-rEQ" secondAttribute="bottom" id="Q5R-9d-1gE"/>
                             <constraint firstItem="N31-rE-bmq" firstAttribute="top" secondItem="ykd-0y-MYN" secondAttribute="bottom" constant="17" id="RUE-4G-71H"/>
                             <constraint firstItem="JqM-2W-Jlj" firstAttribute="leading" secondItem="fOv-DG-rEQ" secondAttribute="leading" id="U3f-gx-SOR"/>
+                            <constraint firstItem="fOv-DG-rEQ" firstAttribute="bottom" secondItem="FaZ-or-20O" secondAttribute="bottom" constant="20" id="cYq-v7-j0S"/>
                             <constraint firstAttribute="trailing" secondItem="ykd-0y-MYN" secondAttribute="trailing" constant="12" id="kCg-Fz-TCC"/>
                             <constraint firstItem="2l9-pD-egc" firstAttribute="centerY" secondItem="N31-rE-bmq" secondAttribute="centerY" id="lI3-tP-bJm"/>
                             <constraint firstItem="JqM-2W-Jlj" firstAttribute="trailing" secondItem="fOv-DG-rEQ" secondAttribute="trailing" id="oax-v5-m4K"/>
