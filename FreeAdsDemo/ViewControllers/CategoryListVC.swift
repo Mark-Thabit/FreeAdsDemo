@@ -26,6 +26,7 @@ class CategoryListVC: UIViewController {
     
     private var dataSource: DataSource? = nil
     private let celebrityList = Celebrity.devList
+    private let categoryList = Category.devList
     
     // MARK: - View life cycle
     
@@ -51,7 +52,8 @@ class CategoryListVC: UIViewController {
     
     private func configureCollectionView() {
         collectionView.register(cellType: CelebrityCell.self)
-        collectionView.register(supplementaryViewType: SectionHeaderView.self, 
+        collectionView.register(cellType: CategoryCell.self)
+        collectionView.register(supplementaryViewType: SectionHeaderView.self,
                                 ofKind: UICollectionView.elementKindSectionHeader)
         
         dataSource = DataSource(collectionView: collectionView, cellProvider: { collectionView, indexPath, itemIdentifier in
@@ -59,10 +61,17 @@ class CategoryListVC: UIViewController {
             
             switch section {
                 case .celebrity:
-                    guard let item = itemIdentifier as? Celebrity else { return nil }
+                    guard let celebrity = itemIdentifier as? Celebrity else { return nil }
                     
                     let cell = collectionView.dequeueReusableCell(for: indexPath, cellType: CelebrityCell.self)
-                    cell.celebrity = item
+                    cell.celebrity = celebrity
+                    return cell
+                    
+                case .category:
+                    guard let category = itemIdentifier as? Category else { return nil }
+                    
+                    let cell = collectionView.dequeueReusableCell(for: indexPath, cellType: CategoryCell.self)
+                    cell.titleLbl.text = category.title
                     return cell
                     
                 default:
@@ -90,24 +99,37 @@ class CategoryListVC: UIViewController {
         
         let snapshot = snapshotForCurrentState()
         dataSource?.apply(snapshot, animatingDifferences: false)
+        
+        collectionView.selectItem(at: IndexPath(item: 0, section: 1), animated: false, scrollPosition: .left)
     }
     
     private func snapshotForCurrentState() -> NSDiffableDataSourceSnapshot<Section, AnyHashable> {
         var snapshot = NSDiffableDataSourceSnapshot<Section, AnyHashable>()
+        
+        // Celebrity Section
         snapshot.appendSections([Section.celebrity])
         snapshot.appendItems(celebrityList)
+        
+        // Category Section
+        snapshot.appendSections([Section.category])
+        snapshot.appendItems(categoryList)
+        
         return snapshot
     }
     
     private func generateLayout() -> UICollectionViewLayout {
-        UICollectionViewCompositionalLayout { sectionIndex, layoutEnvironment in
+        let config = UICollectionViewCompositionalLayoutConfiguration()
+        config.interSectionSpacing = 10 // Spacing between sections
+        
+        return UICollectionViewCompositionalLayout(sectionProvider: { sectionIndex, layoutEnvironment in
             let section = Section.allCases[sectionIndex]
             
             return switch section {
                 case .celebrity: self.generateCelebritySectionLayout()
+                case .category: self.generateCategorySectionLayout()
                 default: nil
             }
-        }
+        }, configuration: config)
     }
     
     private func generateCelebritySectionLayout() -> NSCollectionLayoutSection {
@@ -118,6 +140,24 @@ class CategoryListVC: UIViewController {
                                                                                           heightDimension: .fractionalWidth(0.48)),
                                                        repeatingSubitem: item,
                                                        count: 3)
+        let header = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1),
+                                                                                                    heightDimension: .estimated(44)),
+                                                                 elementKind: UICollectionView.elementKindSectionHeader,
+                                                                 alignment: .top)
+        let section = NSCollectionLayoutSection(group: group)
+        section.boundarySupplementaryItems = [header]
+        section.orthogonalScrollingBehavior = .continuous
+        return section
+    }
+    
+    private func generateCategorySectionLayout() -> NSCollectionLayoutSection {
+        let item = NSCollectionLayoutItem(layoutSize: NSCollectionLayoutSize(widthDimension: .estimated(50),
+                                                                             heightDimension: .fractionalHeight(1)))
+        
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: NSCollectionLayoutSize(widthDimension: .estimated(50),
+                                                                                          heightDimension: .absolute(30)),
+                                                       repeatingSubitem: item,
+                                                       count: 1)
         let header = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1),
                                                                                                     heightDimension: .estimated(44)),
                                                                  elementKind: UICollectionView.elementKindSectionHeader,
