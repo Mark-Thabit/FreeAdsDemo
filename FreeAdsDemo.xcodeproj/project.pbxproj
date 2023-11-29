@@ -27,6 +27,8 @@
 		103DD39A2B15B2F700624EDF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 103DD3982B15B2F700624EDF /* LaunchScreen.storyboard */; };
 		103DD3A52B15B62A00624EDF /* CategoryListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103DD3A42B15B62A00624EDF /* CategoryListVC.swift */; };
 		103DD3AB2B15CE9B00624EDF /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103DD3AA2B15CE9B00624EDF /* RoundedButton.swift */; };
+		10D05E102B172EE900B4B72E /* CreateAdVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D05E0F2B172EE900B4B72E /* CreateAdVC.swift */; };
+		10D05E122B17347C00B4B72E /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D05E112B17347C00B4B72E /* UIView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +54,8 @@
 		103DD39B2B15B2F700624EDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		103DD3A42B15B62A00624EDF /* CategoryListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListVC.swift; sourceTree = "<group>"; };
 		103DD3AA2B15CE9B00624EDF /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		10D05E0F2B172EE900B4B72E /* CreateAdVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAdVC.swift; sourceTree = "<group>"; };
+		10D05E112B17347C00B4B72E /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				1032CC532B16948500F2B676 /* UICollectionView+Extension.swift */,
+				10D05E112B17347C00B4B72E /* UIView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -180,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				103DD3A42B15B62A00624EDF /* CategoryListVC.swift */,
+				10D05E0F2B172EE900B4B72E /* CreateAdVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -275,6 +281,8 @@
 				1032CC542B16948500F2B676 /* UICollectionView+Extension.swift in Sources */,
 				103DD3A52B15B62A00624EDF /* CategoryListVC.swift in Sources */,
 				1032CC572B1694BC00F2B676 /* NibLoadable.swift in Sources */,
+				10D05E122B17347C00B4B72E /* UIView+Extension.swift in Sources */,
+				10D05E102B172EE900B4B72E /* CreateAdVC.swift in Sources */,
 				103DD3AB2B15CE9B00624EDF /* RoundedButton.swift in Sources */,
 				1032CC5C2B16966600F2B676 /* Celebrity.swift in Sources */,
 				1032CC592B1694DB00F2B676 /* Reusable.swift in Sources */,
